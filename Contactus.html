@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Property Rental Management System</title>
+    <title>Contact Us - Rental Property Management System</title>
     <style>
         body {
+            height: 100vh;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -14,58 +15,58 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            opacity: 1; /* Set the opacity of the entire body */
+            opacity: 1;
         }
         .container {
-            max-width: 600px;
-            margin: 10px auto;
-            background-color: rgba(255, 255, 255, 0.8); /* Set the background color with transparency */
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
+            background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
             text-align: center;
-            margin-bottom: 30px;
-            color: #ddd;
+            margin-bottom: 20px;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-top: 20px;
         }
         label {
-            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
         }
-        input[type="number"],
-        select,
         input[type="text"],
         input[type="email"],
-        input[type="tel"] {
+        textarea {
             width: 100%;
             padding: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
         }
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
         button {
-            display: block;
-            width: 100%;
-            padding: 10px;
+            padding: 10px 20px;
             background-color: #007bff;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
         }
         button:hover {
             background-color: #0056b3;
         }
-        /* Adjust the opacity of the form elements */
-        .container input,
-        .container select,
-        .container button {
-            opacity: 1;
-        }
-        /* Navigation Bar Styles */
-        nav {
+          /* Navigation Bar Styles */
+          nav {
             background-color: #333;
             overflow: hidden;
             padding: 10px 0;
@@ -90,7 +91,6 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to Rental Property Management System</h1>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -100,26 +100,22 @@
         </ul>
     </nav>
     <div class="container">
-        <form id="rentalForm">
-            <h2 style="text-align: center; margin-bottom: 10px;">Rent Property</h2>
-            <h2>Property Rent</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required><br>
-                <label for="phone">Phone No:</label>
-                <input type="tel" id="phone" name="phone" required><br>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required><br>
-                <label for="location">Preferred Location:</label>
-                <input type="text" id="location" name="location" required><br>
-                <label for="rooms">No of Rooms Required:</label>
-                <input type="number" id="rooms" name="rooms" required><br>
-                <label for="bathrooms">No of Bathrooms Required:</label>
-                <input type="number" id="bathrooms" name="bathrooms" required><br>
-                <label for="budget">Budget (Rs/month):</label>
-                <input type="number" id="budget" name="budget" required><br>
-            </form>
-            <button type="submit">Submit</button>
+        <h1>Contact Us</h1>
+        <p>If you have any queries/ confusion regarding the Properties you can contact to the below given contact number or else you can mail your query<br>
+        Mobile: +91 172638XXX <br> 
+        Email: bestpropertyrentals@gmail.com
+        </p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="query">Query:</label>
+            <textarea id="Query" name="query" required></textarea>
+            
+            <button type="submit">Send Message</button>
         </form>
     </div>
 </body>
